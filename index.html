@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
+	<link rel="shortcut icon" href="icons/favicon.ico" type="image/x-icon">
+	<link rel="icon" href="icons/favicon.ico" type="image/x-icon">
+	<link rel="manifest" href="/manifest.json">
+	<link type="text/css" rel="stylesheet" href="css/materialize.min.css" media="screen,projection" />
+	<link type="text/css" rel="stylesheet" href="css/estilos.css" media="screen,projection" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<title>Equipo&nbsp;N&ordm;&nbsp;3&nbsp;-&nbsp;App&nbsp;Geofencing&nbsp;-&nbsp;UAI&nbsp;Mobile</title>
+</head>
+
+<body>
+	<main>
+		<nav>
+			<div class="nav-wrapper  purple darken-4 center">
+				<label class="titulo">Geofencing</label>
+			</div>
+		</nav>
+
+		<div class="container center">
+			<div class="row">
+				<ul class="integrantes">
+					<li><img class="responsive-img circular--square" src="img/Aranda_Nelson.jpg"> Nelson Aranda - <a
+							href="mailto:nelsonezequieltimoteo.aranda@alumnos.uai.edu.ar">Contacto</a></li>
+					<li><img class="responsive-img circular--square" src="img/Lomoro_Jorge.jpg"> Jorge Lomoro - <a
+							href="mailto:jorge.lomoro@alumnos.uai.edu.ar">Contacto</a></li>
+					<li><img class="responsive-img circular--square" src="img/Aguirre_Nestor.jpg"> Nestor Aguirre - <a
+							href="mailto:nestorruben.aguirre@alumnos.uai.edu.ar">Contacto</a></li>
+					<li><img class="responsive-img circular--square" src="img/Saavedra_Enzo.jpg"> Enzo Saavedra - <a
+							href="mailto:enzo.saavedrafranco@alumnos.uai.edu.ar">Contacto</a>
+					</li>
+				</ul>
+				<a class="waves-effect waves-light btn purple darken-4" href="abstract.html">Ver Resumen&nbsp;del&nbsp;Art&iacute;culo</a>
+			</div>
+		</div>
+		<script type="text/javascript" src="js/materialize.min.js"></script>
+		<script>
+			document.addEventListener('DOMContentLoaded', function () {
+				var elems = document.querySelectorAll('.collapsible');
+				var instances = M.Collapsible.init(elems, '');
+			});
+			if ('serviceWorker' in navigator)
+				navigator.serviceWorker.register('/sw.js');
+
+		</script>
+	</main>
+	<footer>
+		<div class="footer-copyright  purple darken-4">
+			<div class="container">
+				<label class="pie"> Maestr&iacute;a en Tecnolog&iacute;a Inform&aacute;tica</label>
+			</div>
+		</div>
+	</footer>
+</body>
+
+</html>

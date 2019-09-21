@@ -1,0 +1,51 @@
+ body {
+    display: flex;
+    min-height: 100vh;
+    flex-direction: column;
+  }
+
+  main {
+    flex: 1 0 auto;
+  }
+.sectorTitulo{
+	display: flex;
+}
+.titulo
+{
+	font-size: 1.5rem;
+	color: white;
+	font-weight: bold;
+	width: 80%;
+    text-align: center;
+}
+
+.pie
+{
+
+	font-size: 0.8rem;
+	color: white;
+	font-weight: bold;
+
+}
+.tituloItem
+{
+	font-size: 1.2rem;	
+	font-weight: bold;
+}
+
+.Abstract{
+	text-align: justify;
+	padding: 2rem;
+}
+.container{
+  text-align: center;
+}
+
+.circular--square {
+	border-radius: 50%;
+	width: 6.5rem
+  }
+
+.integrantes{
+	display: flex
+}

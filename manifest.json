@@ -1,0 +1,15 @@
+{
+  "short_name": "UAI Mobile",
+  "name": "DISPOSITIVOS MOVILES - MAESTRIA",
+  "background_color": "#311b92",
+  "theme_color": "#311b92",
+  "icons": [
+	   {
+	      "src": "icons/192.png",
+	      "type": "image/png",
+	      "sizes": "192x192"
+	    }	  	
+  ],
+  "start_url": "/index.html",
+  "display": "standalone"
+}
