@@ -42,9 +42,9 @@
 				var elems = document.querySelectorAll('.collapsible');
 				var instances = M.Collapsible.init(elems, '');
 			});
-			if ('serviceWorker' in navigator)
+			if ('serviceWorker' in navigator) {
 				navigator.serviceWorker.register('/sw.js');
-
+			}
 		</script>
 	</main>
 	<footer>

@@ -1,11 +1,9 @@
-
 const cacheActual = 'UAIMobile-v2';
 
 const recursosEstaticos = [
   'css/materialize.min.css',  
   'js/materialize.min.js' , 
-  'icons/512.png',
-  'icons/192.png'   
+  'icons/192.png'
 ];
 
 self.addEventListener('install', function(event) 
@@ -17,6 +15,7 @@ self.addEventListener('install', function(event)
         return cache.addAll(recursosEstaticos);
        })
   );
+  console.log('Installed ->', event);
 });	 
 	  
 
@@ -30,5 +29,6 @@ self.addEventListener('fetch', function (event) {
         return fetch(event.request);
       })
   );
+  console.log('Fetch -> ', event);
 });
 
