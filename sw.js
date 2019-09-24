@@ -10,7 +10,8 @@ const recursosEstaticos = [
     'img/Avatar_Lomoro_Jorge.png',
     'img/Avatar_Saavedra_Enzo.png',
     'img/geofencing-logo-52x52.jpg',
-    'img/arrow-back-icon.png'
+    'img/arrow-back-icon.png',
+    'css/estilos.css'
 ];
 
 self.addEventListener('install', function (event) {
