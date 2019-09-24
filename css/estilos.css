@@ -104,3 +104,6 @@ main {
 	font-size: 1.4rem;
 	margin-bottom: 1rem;
 }
+.contentCard a{
+	background-color: #8A2BE2;
+}
