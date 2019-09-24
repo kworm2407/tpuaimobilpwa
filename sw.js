@@ -4,11 +4,12 @@ const recursosEstaticos = [
     'css/materialize.min.css',
     'js/materialize.min.js',
     'icons/192.png',
-    'img/Avatar_Aguirre_Nestor.jpg',
-    'img/Avatar_Aranda_Nelson.jpg',
-    'img/Avatar_Lomoro_Jorge.jpg',
-    'img/Avatar_Saavedra_Enzo.jpg',
-    'img/geofencing-icon-5.jpg',
+    'icons/512.jpg',
+    'img/Avatar_Aguirre_Nestor.png',
+    'img/Avatar_Aranda_Nelson.png',
+    'img/Avatar_Lomoro_Jorge.png',
+    'img/Avatar_Saavedra_Enzo.png',
+    'img/geofencing-logo-52x52.jpg',
     'img/arrow-back-icon.png'
 ];
 
