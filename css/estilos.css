@@ -1,51 +1,106 @@
- body {
+body {
     display: flex;
     min-height: 100vh;
     flex-direction: column;
-  }
-
-  main {
-    flex: 1 0 auto;
-  }
-.sectorTitulo{
-	display: flex;
 }
-.titulo
-{
-	font-size: 1.5rem;
-	color: white;
-	font-weight: bold;
-	width: 80%;
+
+main {
+    flex: 1 0 auto;
+}
+
+.sectorTitulo {
+    display: flex;
+    justify-content: space-around;
+}
+
+.sectorTitulo a {
+    width: 3%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.sectorTitulo a img {
+    height: 3.5rem;
+}
+
+.sectorTitulo label {
+    width: 97%;
+}
+
+.titulo {
+    font-size: 1.5rem;
+    color: white;
+    font-weight: bold;
+    width: 80%;
+    text-align: center;
+}
+.contenidoPrincipal h2{
+	text-align: center;
+}
+.pie {
+
+    font-size: 0.8rem;
+    color: white;
+    font-weight: bold;
+
+}
+
+.tituloItem {
+    font-size: 1.2rem;
+    font-weight: bold;
+}
+
+.Abstract {
+    text-align: justify;
+    padding: 2rem;
+}
+
+.container {
     text-align: center;
 }
 
-.pie
-{
-
-	font-size: 0.8rem;
-	color: white;
-	font-weight: bold;
-
-}
-.tituloItem
-{
-	font-size: 1.2rem;	
-	font-weight: bold;
-}
-
-.Abstract{
-	text-align: justify;
-	padding: 2rem;
-}
-.container{
-  text-align: center;
-}
-
 .circular--square {
-	border-radius: 50%;
-	width: 6.5rem
-  }
+    border-radius: 50%;
+}
 
-.integrantes{
-	display: flex
+.integrantes {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+.integrantes li {
+    padding: 4rem;
+    flex-shrink: 0;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.integrantes li img {
+    width: 10rem;
+    height: 11rem;
+    margin: 1rem 0rem;
+    border: solid 0.2rem #311b92;
+}
+
+.links {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	margin-bottom: 2rem;
+}
+
+.contentCard {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.contentCard span{
+	font-size: 1.4rem;
+	margin-bottom: 1rem;
 }
