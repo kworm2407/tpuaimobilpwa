@@ -27,12 +27,8 @@ self.addEventListener('install', function (event) {
 });
 
 
-self.addEventListener('fetch', function (event) {
-    event.respondWith(fromCache(event.request));
-    event.waitUntil(update(event.request).then(refresh)
-    console.log('Fetch -> ', event);
-    
-    /*event.respondWith(
+self.addEventListener('fetch', function (event) {   
+    event.respondWith(
         caches.match(event.request)
             .then(function (response) {
                 if (response) {
@@ -41,6 +37,22 @@ self.addEventListener('fetch', function (event) {
                 return fetch(event.request);
             })
     );
-    console.log('Fetch -> ', event);*/
+    console.log('Fetch -> ', event);
+});
+
+self.addEventListener('activate', function(event) {
+  var version = 'v1';
+  event.waitUntil(
+    caches.keys()
+      .then(cacheNames =>
+        Promise.all(
+          cacheNames
+            .map(c => c.split('-'))
+            .filter(c => c[0] === 'cachestore')
+            .filter(c => c[1] !== version)
+            .map(c => caches.delete(c.join('-')))
+        )
+      )
+  );
 });
 
