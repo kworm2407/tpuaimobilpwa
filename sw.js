@@ -28,7 +28,11 @@ self.addEventListener('install', function (event) {
 
 
 self.addEventListener('fetch', function (event) {
-    event.respondWith(
+    event.respondWith(fromCache(event.request));
+    event.waitUntil(update(event.request).then(refresh)
+    console.log('Fetch -> ', event);
+    
+    /*event.respondWith(
         caches.match(event.request)
             .then(function (response) {
                 if (response) {
@@ -37,6 +41,6 @@ self.addEventListener('fetch', function (event) {
                 return fetch(event.request);
             })
     );
-    console.log('Fetch -> ', event);
+    console.log('Fetch -> ', event);*/
 });
 
