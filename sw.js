@@ -1,4 +1,4 @@
-const cacheActual = 'Equipo3PWA-v1';
+const cacheActual = 'cachestore-v1';
 
 const recursosEstaticos = [
     'css/materialize.min.css',
@@ -34,7 +34,7 @@ self.addEventListener('activate', function (event) {
                 Promise.all(
                     cacheNames
                         .map(c => c.split('-'))
-                        .filter(c => c[0] === 'Equipo3PWA')
+                        .filter(c => c[0] === 'cachestore')
                         .filter(c => c[1] !== version)
                         .map(c => caches.delete(c.join('-')))
                 )
