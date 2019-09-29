@@ -11,10 +11,11 @@ body {
     align-items: center;
     height: 10vh;
     width: 100vw;
+    overflow-x: hidden;
 }
 
 .sectorTitulo a {
-    width: 3%;
+    width: 3vw;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -25,7 +26,8 @@ body {
 }
 
 .sectorTitulo label {
-    width: 97%;
+    width: 97vw;
+    overflow-x: hidden;
 }
 
 .titulo {
@@ -39,6 +41,7 @@ body {
     height: 85vh;
     overflow: auto;
     width: 100vw;
+    overflow-x: hidden;
 }
 .contenidoPrincipal h2{
 	text-align: center;
@@ -118,4 +121,5 @@ footer{
     justify-content: center;
     align-items: center;
     width: 100vw;
+    overflow-x: hidden;
 }
