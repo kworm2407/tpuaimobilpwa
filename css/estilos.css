@@ -2,6 +2,7 @@ body {
     display: flex;
     min-height: 100vh;
     flex-direction: column;
+    width: 100vw;
 }
 
 .sectorTitulo {
@@ -9,6 +10,7 @@ body {
     justify-content: space-around;
     align-items: center;
     height: 10vh;
+    width: 100vw;
 }
 
 .sectorTitulo a {
@@ -36,6 +38,7 @@ body {
 .contenidoPrincipal{
     height: 85vh;
     overflow: auto;
+    width: 100vw;
 }
 .contenidoPrincipal h2{
 	text-align: center;
@@ -114,4 +117,5 @@ footer{
     display: flex;
     justify-content: center;
     align-items: center;
+    width: 100vw;
 }
