@@ -1,17 +1,14 @@
-html{overflow-x: hidden;}
 body {
     display: flex;
     min-height: 100vh;
     flex-direction: column;
 }
 
-main {
-    flex: 1 0 auto;
-}
-
 .sectorTitulo {
     display: flex;
     justify-content: space-around;
+    align-items: center;
+    height: 10vh;
 }
 
 .sectorTitulo a {
@@ -35,6 +32,10 @@ main {
     font-weight: bold;
     width: 80%;
     text-align: center;
+}
+.contenidoPrincipal{
+    height: 85vh;
+    overflow: auto;
 }
 .contenidoPrincipal h2{
 	text-align: center;
@@ -107,4 +108,10 @@ main {
 }
 .contentCard a{
 	background-color: #8A2BE2;
+}
+footer{
+    height: 5vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }

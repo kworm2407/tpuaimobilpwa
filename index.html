@@ -8,51 +8,49 @@
     <link rel="manifest" href="manifest.json">
     <link type="text/css" rel="stylesheet" href="css/materialize.min.css" media="screen,projection"/>
     <link type="text/css" rel="stylesheet" href="css/estilos.css" media="screen,projection"/>
-    <meta name="viewport" content="width=device-width, initial-scale=1"/>
-	<meta name="theme-color" content="#311b92"/>
-	<link rel="apple-touch-icon" href="img/geofencing-logo-52x52.jpg">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <meta name="theme-color" content="#311b92"/>
+    <link rel="apple-touch-icon" href="img/geofencing-logo-52x52.jpg">
     <link rel="apple-touch-icon" sizes="76x76" href="img/geofencing-logo-76x76.jpg">
     <link rel="apple-touch-icon" sizes="120x120" href="img/geofencing-logo-120x120.jpg">
     <link rel="apple-touch-icon" sizes="152x152" href="img/geofencing-logo-152x152.jpg">
-	<meta name="Description" content="Aplicacion PWA - Equipo N° 3 - UAI">
+    <meta name="Description" content="Aplicacion PWA - Equipo N° 3 - UAI">
     <title>Equipo&nbsp;N&ordm;&nbsp;3&nbsp;-&nbsp;App&nbsp;Geofencing&nbsp;-&nbsp;UAI&nbsp;Mobile</title>
 </head>
 
 <body>
-<main>
-    <nav>
-        <div class="purple darken-4 center">
-			<div class="sectorTitulo">
-				<a href="index.html"><img src="img/geofencing-logo-52x52.jpg" alt="Logo_Geofencing"></a>
-            	<label class="titulo">Geofencing</label>
-			</div>
-        </div>
+    <nav class="purple darken-4 sectorTitulo">
+        <a href="index.html"><img src="img/geofencing-logo-52x52.jpg" alt="Logo_Geofencing"></a>
+        <label class="titulo">Geofencing</label>
     </nav>
-
-    <div class="contenidoPrincipal">
-		<h2>Integrantes del Equipo N° 3</h2>
+    <section class="contenidoPrincipal">
+        <h2>Integrantes del Equipo N° 3</h2>
         <ul class="integrantes">
             <li>
-                <img class="responsive-img circular--square" src="img/Avatar_Aranda_Nelson.png" alt="Integrante N° 1 - Lic. Nelson Aranda">
+                <img class="responsive-img circular--square" src="img/Avatar_Aranda_Nelson.png"
+                     alt="Integrante N° 1 - Lic. Nelson Aranda">
                 <div class="contentCard">
                     <span>Lic. Nelson Aranda</span>
                     <a href="mailto:nelsonezequieltimoteo.aranda@alumnos.uai.edu.ar" class="btn pulse">Contactame</a>
                 </div>
             </li>
             <li>
-                <img class="responsive-img circular--square" src="img/Avatar_Lomoro_Jorge.png" alt="Integrante N° 2 - Ing. Jorge Lomoro">
+                <img class="responsive-img circular--square" src="img/Avatar_Lomoro_Jorge.png"
+                     alt="Integrante N° 2 - Ing. Jorge Lomoro">
                 <div class="contentCard"><span>Ing. Jorge Lomoro</span>
                     <a href="mailto:jorge.lomoro@alumnos.uai.edu.ar" class="btn pulse">Contactame</a></div>
             </li>
             <li>
-                <img class="responsive-img circular--square" src="img/Avatar_Aguirre_Nestor.png" alt="Integrante N° 3 - Lic. Nestor Aguirre">
+                <img class="responsive-img circular--square" src="img/Avatar_Aguirre_Nestor.png"
+                     alt="Integrante N° 3 - Lic. Nestor Aguirre">
                 <div class="contentCard">
                     <span>Lic. Nestor Aguirre</span>
                     <a href="mailto:nestorruben.aguirre@alumnos.uai.edu.ar" class="btn pulse">Contactame</a>
                 </div>
             </li>
             <li>
-                <img class="responsive-img circular--square" src="img/Avatar_Saavedra_Enzo.png" alt="Integrante N° 4 - Ing. Enzo Saavedra">
+                <img class="responsive-img circular--square" src="img/Avatar_Saavedra_Enzo.png"
+                     alt="Integrante N° 4 - Ing. Enzo Saavedra">
                 <div class="contentCard">
                     <span>Ing. Enzo Saavedra</span>
                     <a href="mailto:enzo.saavedrafranco@alumnos.uai.edu.ar" class="btn pulse">Contactame</a>
@@ -62,8 +60,11 @@
         <div class="links">
             <a class="waves-effect waves-light btn purple darken-4" href="abstract.html">Ver Resumen&nbsp;del&nbsp;Art&iacute;culo</a>
         </div>
+    </section>
 
-    </div>
+    <footer class="purple darken-4">
+        <label class="pie"> Maestr&iacute;a en Tecnolog&iacute;a Inform&aacute;tica</label>
+    </footer>
     <script type="text/javascript" src="js/materialize.min.js"></script>
     <script>
         document.addEventListener('DOMContentLoaded', function () {
@@ -74,14 +75,6 @@
             navigator.serviceWorker.register('sw.js');
         }
     </script>
-</main>
-<footer>
-    <div class="footer-copyright  purple darken-4">
-        <div class="container">
-            <label class="pie"> Maestr&iacute;a en Tecnolog&iacute;a Inform&aacute;tica</label>
-        </div>
-    </div>
-</footer>
 </body>
 
 </html>
