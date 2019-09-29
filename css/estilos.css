@@ -27,7 +27,7 @@ body {
 
 .sectorTitulo label {
     width: 97vw;
-    overflow-x: hidden;
+    /*overflow-x: hidden;*/
 }
 
 .titulo {
