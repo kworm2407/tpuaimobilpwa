@@ -1,8 +1,5 @@
 var cacheActual = 'cachestore-v1';
-var CACHE_VERSION = 1;
-var CURRENT_CACHES = {
-    font: 'font-cache-v' + CACHE_VERSION
-};
+
 const recursosEstaticos = [
     'css/materialize.min.css',
     'js/materialize.min.js',
