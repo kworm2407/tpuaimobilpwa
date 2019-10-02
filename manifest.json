@@ -1,6 +1,7 @@
 {
-  "short_name": "UAI Mobile",
-  "name": "DISPOSITIVOS MOVILES - MAESTRIA",
+  "short_name": "Team 3 Geofencing",
+  "name": "Equipo N° 3 - Geofencing ",
+  "description": "Aplicacion PWA desarrollada por el Equipo 3 para introducir sobre Geofencing.",
   "background_color": "#311b92",
   "theme_color": "#311b92",
   "icons": [

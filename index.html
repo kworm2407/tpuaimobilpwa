@@ -67,12 +67,14 @@
     </footer>
     <script type="text/javascript" src="js/materialize.min.js"></script>
     <script>
-        document.addEventListener('DOMContentLoaded', function () {
-            var elems = document.querySelectorAll('.collapsible');
-            var instances = M.Collapsible.init(elems, '');
-        });
         if ('serviceWorker' in navigator) {
-            navigator.serviceWorker.register('sw.js');
+            window.addEventListener('load', function() {
+                navigator.serviceWorker.register('/sw.js').then(function(registration) {
+                    console.log('SW registrado correctamente');
+                }, function(err) {
+                    console.log('SW fallo', err);
+                });
+            });
         }
     </script>
 </body>

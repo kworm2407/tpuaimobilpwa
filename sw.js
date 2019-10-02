@@ -17,35 +17,44 @@ const recursosEstaticos = [
 ];
 
 self.addEventListener('install', function (event) {
-    event.waitUntil
-        (
-            caches.open(cacheActual).then(function (cache) {
-                return cache.addAll(recursosEstaticos);
-            })
-        );
+    event.waitUntil(
+        caches.open(cacheActual).then(cache => {
+            return cache.addAll(recursosEstaticos);
+        })
+    );
     console.log('Installed ->', event);
 });
 
 self.addEventListener('activate', function (event) {
-    var version = 'v1';
+    // var version = 'v1';
+    // event.waitUntil(
+    //     caches.keys()
+    //         .then(cacheNames =>
+    //             Promise.all(
+    //                 cacheNames
+    //                     .map(c => c.split('-'))
+    //                     .filter(c => c[0] === 'cachestore')
+    //                     .filter(c => c[1] !== version)
+    //                     .map(c => caches.delete(c.join('-')))
+    //             )
+    //         )
+    // );
     event.waitUntil(
-        caches.keys()
-            .then(cacheNames =>
-                Promise.all(
-                    cacheNames
-                        .map(c => c.split('-'))
-                        .filter(c => c[0] === 'cachestore')
-                        .filter(c => c[1] !== version)
-                        .map(c => caches.delete(c.join('-')))
-                )
-            )
+        caches.keys().then(cacheNames => Promise.all(
+            cacheNames.filter(cacheName => {
+                return cacheName !== cacheActual
+            }).map(cacheName => caches.delete(cacheName))
+        ))
     );
 });
 
-self.addEventListener("fetch", function (event) {
-    event.respondWith(
-        fetch(event.request).catch(function () {
-            return caches.match(event.request);
+self.addEventListener("fetch", function (evt) {
+    evt.respondWith(
+        caches.match(evt.request).then(function (response) {
+            return response || fetch(evt.request);
         })
+        // fetch(event.request).catch(function () {
+        //     return caches.match(event.request);
+        // })
     );
 });
