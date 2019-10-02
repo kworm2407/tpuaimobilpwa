@@ -1,4 +1,4 @@
-var cacheActual = 'cachestore-v1';
+var cacheActual = 'cachestore-1';
 
 const recursosEstaticos = [
     'css/materialize.min.css',
@@ -26,26 +26,31 @@ self.addEventListener('install', function (event) {
 });
 
 self.addEventListener('activate', function (event) {
-    var version = 'v2';
-    event.waitUntil(
-        caches.keys()
-            .then(cacheNames =>
-                Promise.all(
-                    cacheNames
-                        .map(c => c.split('-'))
-                        .filter(c => c[0] === 'cachestore')
-                        .filter(c => c[1] !== version)
-                        .map(c => caches.delete(c.join('-')))
-                )
-            )
-    );
     // event.waitUntil(
-    //     caches.keys().then(cacheNames => Promise.all(
-    //         cacheNames.filter(cacheName => {
-    //             return cacheName !== cacheActual
-    //         }).map(cacheName => caches.delete(cacheName))
-    //     ))
+    //     caches.keys()
+    //         .then(cacheNames =>
+    //             Promise.all(
+    //                 cacheNames
+    //                     .map(c => c.split('-'))
+    //                     .filter(c => c[0] === 'cachestore')
+    //                     .filter(c => c[1] !== version)
+    //                     .map(c => caches.delete(c.join('-')))
+    //             )
+    //         )
     // );
+    event.waitUntil(
+        caches.keys().then(keys => {
+            console.log(keys)
+        })
+        // caches.keys().then(cacheNames => Promise.all(
+        //     cacheNames.map(cacheName => caches.delete(cacheName))
+        // ))
+        // var slitNameCache = cacheActual.split('-')
+        // var versionCache = slitNameCache[1] + 1
+        // caches.open(cacheActual).then(cache => {
+        //     return cache.addAll(recursosEstaticos);
+        // })
+    );
 
 });
 
