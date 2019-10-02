@@ -26,7 +26,7 @@ self.addEventListener('install', function (event) {
 });
 
 self.addEventListener('activate', function (event) {
-    var version = 'v1';
+    var version = 'v2';
     event.waitUntil(
         caches.keys()
             .then(cacheNames =>
