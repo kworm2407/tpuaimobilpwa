@@ -1,4 +1,4 @@
-const cacheActual = 'cachestore-v1';
+const cacheActual = 'cachestore-v1.0';
 
 const recursosEstaticos = [
     'css/materialize.min.css',
