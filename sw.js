@@ -1,4 +1,6 @@
-var cacheActual = 'cachestore-1';
+var cacheActual = 'cachestore-v5';
+var cacheName = 'cachestore-v';
+var cacheVersion = 1
 
 const recursosEstaticos = [
     'css/materialize.min.css',
@@ -16,48 +18,50 @@ const recursosEstaticos = [
     'index.html'
 ];
 
-self.addEventListener('install', function (event) {
+const versionCache = 0
+
+self.addEventListener('install', function (event,versionCache,document) {
+    self.skipWaiting();
     event.waitUntil(
-        caches.open(cacheActual).then(cache => {
+        caches.keys().then((keys,versionCache) => {
+            var fiarr = keys.map(key => key.split('-v'))
+            let iVersion = parseInt(fiarr[0][1], 10);
+            versionCache = iVersion + 1
+            console.log(versionCache)
+        })
+    );
+    
+    event.waitUntil(
+        caches.open(cacheName+cacheVersion).then(cache => {
             return cache.addAll(recursosEstaticos);
         })
     );
+    
     console.log('Installed ->', event);
 });
 
 self.addEventListener('activate', function (event) {
-    // event.waitUntil(
-    //     caches.keys()
-    //         .then(cacheNames =>
-    //             Promise.all(
-    //                 cacheNames
-    //                     .map(c => c.split('-'))
-    //                     .filter(c => c[0] === 'cachestore')
-    //                     .filter(c => c[1] !== version)
-    //                     .map(c => caches.delete(c.join('-')))
-    //             )
-    //         )
-    // );
     event.waitUntil(
         caches.keys().then(keys => {
-            console.log(keys)
+            return Promise.all(keys
+                .map(key => key.split('-'))
+                .filter(key => key[0] === 'cachestore')
+                .filter(key => key[1] !== 'v'+cacheVersion)
+                .map(key => caches.delete(key.join('-')))
+            )
         })
-        // caches.keys().then(cacheNames => Promise.all(
-        //     cacheNames.map(cacheName => caches.delete(cacheName))
-        // ))
-        // var slitNameCache = cacheActual.split('-')
-        // var versionCache = slitNameCache[1] + 1
-        // caches.open(cacheActual).then(cache => {
-        //     return cache.addAll(recursosEstaticos);
-        // })
     );
-
 });
 
 self.addEventListener("fetch", function (event) {
+    // event.respondWith(
+    //     fetch(event.request).catch(function() {
+    //         return caches.match(event.request);
+    //     })
+    // );
     event.respondWith(
-        fetch(event.request).catch(function() {
-            return caches.match(event.request);
+        caches.match(event.request).then(cacheResponse => {
+          return cacheResponse || fetch(event.request);
         })
-    );
+      );
 });
