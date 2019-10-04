@@ -1,4 +1,3 @@
-var cacheActual = 'cachestore-v5';
 var cacheName = 'cachestore-v';
 var cacheVersion = 1
 
@@ -22,15 +21,7 @@ const versionCache = 0
 
 self.addEventListener('install', function (event,versionCache,document) {
     self.skipWaiting();
-    event.waitUntil(
-        caches.keys().then((keys,versionCache) => {
-            var fiarr = keys.map(key => key.split('-v'))
-            let iVersion = parseInt(fiarr[0][1], 10);
-            versionCache = iVersion + 1
-            console.log(versionCache)
-        })
-    );
-    
+   
     event.waitUntil(
         caches.open(cacheName+cacheVersion).then(cache => {
             return cache.addAll(recursosEstaticos);
@@ -38,6 +29,15 @@ self.addEventListener('install', function (event,versionCache,document) {
     );
     
     console.log('Installed ->', event);
+      // event.waitUntil(
+    //     caches.keys().then((keys,versionCache) => {
+    //         var fiarr = keys.map(key => key.split('-v'))
+
+    //         let iVersion = parseInt(fiarr[0][1], 10);
+    //         versionCache = iVersion + 1
+    //         console.log(versionCache)
+    //     })
+    // ); 
 });
 
 self.addEventListener('activate', function (event) {
