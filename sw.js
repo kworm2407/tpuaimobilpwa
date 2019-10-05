@@ -1,5 +1,5 @@
 var cacheName = 'cachestore-v';
-var cacheVersion = 1
+var cacheVersion = 4
 
 const recursosEstaticos = [
     'css/materialize.min.css',
